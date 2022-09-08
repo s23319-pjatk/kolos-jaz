@@ -8,13 +8,13 @@
 		<version>2.7.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>pl.MarGosz</groupId>
-	<artifactId>MovieService</artifactId>
+	<groupId>pl.s23319.nbp</groupId>
+	<artifactId>NbpService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>MovieService</name>
+	<name>NbpService</name>
 	<description>s23319-jaz-nbp</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

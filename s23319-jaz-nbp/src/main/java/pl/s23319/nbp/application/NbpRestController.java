@@ -8,19 +8,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/nbp")
 public class NbpRestController {
-    final NbpService nbpJaz_service;
+    final NbpService nbpservice;
 
-    public NbpRestController(NbpService nbpJaz_service) {
-        this.nbpJaz_service = nbpJaz_service;
+    public NbpRestController(NbpService nbpservice) {
+        this.nbpservice = nbpservice;
     }
 
     @GetMapping("/waluta/{code}/{waluta}/{startDate}/{endDate}")
     public NbpEntity all(@PathVariable String code, @PathVariable String waluta, @PathVariable  String startDate, @PathVariable String endDate){
-        return nbpJaz_service.getWaluta(code,waluta,startDate,endDate);
+        return nbpservice.getWaluta(code,waluta,startDate,endDate);
     }
     @GetMapping("/zloto")
     public String all2(){
-        return nbpJaz_service.getZloto();
+        return nbpservice.getZloto();
     }
 
 }

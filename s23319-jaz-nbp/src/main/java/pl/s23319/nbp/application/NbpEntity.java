@@ -1,11 +1,13 @@
 package pl.s23319.nbp.application;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+@Entity
 public class NbpEntity {
     NbpEntity(){}
     @Id
@@ -18,7 +20,7 @@ public class NbpEntity {
     private LocalTime time;
     private LocalDate date;
 
-    NbpEntity(String code,String waluta,  String startDate, String endDate, String time,String date){
+    public NbpEntity(String code,String waluta,  String startDate, String endDate, String time,String date){
         this.waluta=waluta;
         this.code=code;
         this.startDate=startDate;
